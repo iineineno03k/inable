@@ -1,0 +1,112 @@
+/* 生成物（build.mjs）。直すときは sketches/sketch.css を直して作り直す */
+/* 方向案スケッチ共通。1つのHTMLをPC（主）とスマホの両方で見る。760px以下で1列に積む。 */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP","Hiragino Sans",sans-serif;background:#fff;color:#222}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+header{border-bottom:1px solid #eee}
+header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;letter-spacing:.12em;font-size:20px}
+.logo small{font-weight:400;font-size:12px;color:#777;letter-spacing:0;margin-left:12px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;gap:28px;font-size:14px;align-items:center}
+.cta-btn{background:#2f5d4e;color:#fff;padding:9px 16px;border-radius:4px;font-weight:700}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{display:block}
+header{position:sticky;top:0;background:#fff;z-index:5}
+.pagehead{background:#f3f6f4;padding:56px 0 48px}
+.pagehead .crumb{font-size:12px;color:#777;margin-bottom:10px}
+.pagehead h1{font-size:32px;line-height:1.5}
+.pagehead p{margin-top:12px;font-size:16px;color:#444;line-height:1.9;max-width:44em}
+.tint{background:#f7f8f6}
+.endcta{background:#2f5d4e;color:#fff;padding:56px 0;text-align:center}
+.endcta h2{font-size:24px;line-height:1.5}
+.endcta p{margin-top:12px;font-size:15px;opacity:.9}
+.btn.ghost.light{background:transparent;color:#fff;border-color:#fff}
+footer{background:#1f2a26;color:#cfd8d3;padding:40px 0 20px;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer .logo{color:#fff;font-weight:700;letter-spacing:.12em;margin-bottom:8px}
+footer nav{gap:12px 20px;font-size:13px;flex-wrap:wrap}
+footer .copy{margin-top:24px;border-top:1px solid #33413b;padding-top:14px;font-size:12px}
+.faq dt{font-weight:700;margin-top:20px;font-size:16px}
+.faq dd{margin:6px 0 0;font-size:15px;line-height:1.85;color:#444}
+.list{padding-left:1.2em;font-size:15px;line-height:2;color:#444}
+.kv{width:100%;font-size:15px}.kv th{width:9em;background:#f3f6f4}.kv td,.kv th{white-space:normal;padding:12px 14px}
+.voice{font-size:38px;line-height:1.55;font-weight:700}
+.sub{font-size:16px;line-height:1.9;margin-top:16px;color:#444}
+.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:14px 22px;background:#2f5d4e;color:#fff;font-weight:700;border-radius:4px;font-size:15px;text-align:center}
+.btn.ghost{background:#fff;color:#2f5d4e;border:1px solid #2f5d4e}
+.center{justify-content:center;text-align:center}
+.band{background:#2f5d4e;color:#fff;padding:26px 20px;font-size:24px;font-weight:700;text-align:center}
+.h2{font-size:26px;font-weight:700;line-height:1.5;margin-bottom:24px}
+.h3{font-size:18px;font-weight:700;line-height:1.5;margin:14px 0 6px}
+.p{font-size:15px;line-height:1.85;color:#444}
+.sec{padding-top:56px;padding-bottom:64px}
+.img{background:#e6e6e6 center/cover;border-radius:2px;min-height:190px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.hero .copy{padding:96px 48px 48px max(40px,calc(50vw - 520px))}
+.pdfs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:640px;margin:0 auto}
+.pdf{width:100%;height:140px;object-fit:cover;object-position:top;border:1px solid #bbb;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.ba{display:block}
+.arrow{text-align:center;font-size:30px;color:#2f5d4e;margin:6px 0}
+.arrow::before{content:"↓"}
+.tblbox{overflow-x:auto}
+.xl{overflow-x:auto;border:1px solid #bbb;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.xlbar{background:#1f6e43;color:#fff;font-size:12px;padding:6px 10px}
+.cards{display:none}
+.card{border:1px solid #ccc;padding:10px 12px;margin-bottom:8px;font-size:13px;line-height:1.7}
+.card b,.card span,.card em{display:block}
+.card.warn{background:#fff3e0;border-color:#e3b26b}
+.card em{font-style:normal;color:#9a4b00;font-weight:700;margin-top:4px}
+.portrait-img{width:100%;max-width:360px;border-radius:4px;display:block}
+.mail{font-size:22px;font-weight:700;color:#2f5d4e;word-break:break-all}
+.small{font-size:13px;color:#666;line-height:1.8}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+td,th{border:1px solid #ccc;padding:6px 8px;white-space:nowrap;text-align:left}
+td:last-child{white-space:normal;min-width:220px}
+td.n{text-align:right}
+th{background:#eef3f0}
+.warn td{background:#fff3e0}
+.portrait{background:#cfcfcf;display:flex;align-items:center;justify-content:center;color:#666;font-size:15px;min-height:420px}
+.step{border-top:3px solid #2f5d4e;padding-top:14px}
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  header .wrap{height:56px}
+  header nav a:not(.cta-btn){display:none}
+  .cta-btn{padding:8px 12px;font-size:13px}
+  .pagehead{padding:36px 0 28px}
+  .pagehead h1{font-size:24px}
+  .endcta h2{font-size:19px}
+  .logo small{display:none}
+  .voice{font-size:24px}
+  .sub{font-size:14px}
+  .h2{font-size:20px}
+  .band{font-size:18px;padding:22px 20px}
+  .sec{padding-top:36px;padding-bottom:40px}
+  .hero,.grid2,.grid3,.ba{grid-template-columns:minmax(0,1fr)!important;gap:20px}
+  .hero{min-height:0}
+  .hero .img{order:-1;min-height:260px}
+  .hero .copy{padding:24px 20px 32px!important}
+  table{font-size:12px}
+  .pdf{height:90px}
+  .xl{display:none}
+  .mail{font-size:18px}
+  .cards{display:block}
+  .portrait{min-height:300px}
+  .btn{flex:1 1 100%}
+}
+.cost{font-size:16px;font-weight:700;color:#222;margin-top:24px;line-height:1.8}
+.samples{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.samples img{width:100%;border:1px solid #bbb;box-shadow:0 2px 6px rgba(0,0,0,.08);display:block}
+.samples figcaption{font-size:13px;color:#555;margin-top:8px;line-height:1.6}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:700}
+.step .img{margin-bottom:6px}
+@media (max-width:760px){.samples{grid-template-columns:1fr 1fr}}
+.zoom{position:fixed;inset:0;background:rgba(20,28,25,.85);display:none;align-items:center;justify-content:center;z-index:20;padding:24px}
+.zoom.open{display:flex}
+.zoom img{max-width:min(900px,100%);max-height:100%;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.4);overflow:auto}
+.zoom button{position:absolute;top:16px;right:20px;background:none;border:0;color:#fff;font-size:36px;cursor:pointer}
+@media (max-width:760px){.zoom{overflow:auto;align-items:flex-start;justify-content:flex-start;padding:56px 0 24px}.zoom img{max-width:none;width:720px;max-height:none}}
+.btn.big{font-size:18px;padding:18px 32px}
